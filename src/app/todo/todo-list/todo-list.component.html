@@ -1,0 +1,19 @@
+
+<h2>Todo List</h2>
+<button (click)="onAddTodo()">Add Todo</button>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let todo of todos">
+    <td>{{ todo.title }}</td>
+    <td>{{ todo.description }}</td>
+    <td>
+      <button (click)="onEditTodo(todo.id)">Edit</button>
+      <button (click)="onDeleteTodo(todo.id)">Delete</button>
+    </td>
+  </tr>
+</table>
